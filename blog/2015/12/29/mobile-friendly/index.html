@@ -6,7 +6,7 @@
         <meta name="author" content="Gioele La Manno">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>The Whirling Science - Tags | The Whirling Science</title>
+        <title>Update: website is now mobile friendly | The Whirling Science</title>
 
         <link rel="alternate" type="application/atom+xml" title="The Whirling Science blog atom feed" href="/feeds/all.atom.xml" />
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
@@ -48,13 +48,73 @@
             </div>
         </header>
 
-    <h1>Tags for The Whirling Science</h1>        <li><a href="http://thewhirlingscience.github.io/tag/calculation.html">Calculation</a> (1)</li>
-        <li><a href="http://thewhirlingscience.github.io/tag/first.html">First</a> (1)</li>
-        <li><a href="http://thewhirlingscience.github.io/tag/galileo.html">Galileo</a> (1)</li>
-        <li><a href="http://thewhirlingscience.github.io/tag/ipython.html">Ipython</a> (1)</li>
-        <li><a href="http://thewhirlingscience.github.io/tag/mobile.html">mobile</a> (1)</li>
-        <li><a href="http://thewhirlingscience.github.io/tag/notebook.html">Notebook</a> (1)</li>
-        <li><a href="http://thewhirlingscience.github.io/tag/test.html">Test</a> (3)</li>
+<div class="container post">
+
+    <article>
+        <header>
+            <h1>Update: website is now mobile friendly</h1>
+            <time datetime="article.date.isoformat()" pubdate>December 29, 2015</time>
+        </header>
+
+        <div class="article_content">
+            <p>Now the website is much preattier on mobile platforms. A lot of imporvements are yet needed to get the website started.
+Please contact us if you have any suggestions.</p>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="http://thewhirlingscience.github.io/tag/test.html" class="tag">Test</a>
+                    <a href="http://thewhirlingscience.github.io/tag/mobile.html" class="tag">mobile</a>
+            </div>
+            <div>
+                <a id="comments-button" class="comments_btn" href="#disqus_thread">Show comments</a>
+            </div>
+        </div>
+    </article>
+</div>
+
+<script type="text/javascript">
+(function () {
+    'use strict';
+
+    // Global object
+    var App = {};
+
+    // Create button
+    App.commentsButton = document.getElementById('comments-button');
+
+    App.commentsButton.onclick = function () {
+        // Remove button action on click
+        App.commentsButton.onclick = function () {
+        }
+
+        // Create comments container
+        App.disqusContainer = document.createElement('div');
+        App.disqusContainer.setAttribute('id', 'disqus_thread');
+        // App.disqusContainer.setAttribute('class', 'container');
+
+        // Append container to body or div
+        // document.body.appendChild( App.disqusContainer );
+        var container = document.getElementsByClassName('container post')[0];
+        container.appendChild(App.disqusContainer);
+
+        // Your Disqus shortname
+        App.disqus_shortname = 'whirlingscience';
+
+        // Embed Disqus
+        var dsq = document.createElement('script');
+
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + App.disqus_shortname + '.disqus.com/embed.js';
+
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+        window.scrollTo(0, dsq.offsetTop - 200);
+    };
+})();
+</script>
+
         <style type="text/css">.text_cell .prompt {
     display: none;
 }
